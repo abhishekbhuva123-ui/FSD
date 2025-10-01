@@ -18,11 +18,31 @@
         <title>MediaTags</title>
     </head>
     <body>
-        <figure>
+        <figure align="center">
             <img src="https://tse2.mm.bing.net/th/id/OIP.B39-1EvwOFXOffOfIKZT0AHaEK?rs=1&pid=ImgDetMain&o=7&rm=3" alt="alt">
             <!--Absolute File Paths-->
-            <img src="D:\HTML\HTML\image.jpg" alt="Relative File Path">
+            <img src="./image.jpg" alt="Relative File Path">
             <!--Relative File Paths-->
+            
+            <!--Audio-->
+            <!--• Attributes: controls (show play/pause controls), autoplay, loop, muted. 
+                              o controls → shows play/pause/volume UI. 
+                              o autoplay → tries to start audio automatically. 
+                              o muted → starts muted (browsers allow muted autoplay). 
+                              o loop → plays continuously. -->
+                              <br>
+             <audio controls autoplay loop muted>
+                <source src="./Tum Mere Na Huye Thamma 128 Kbps.mp3" type="audio/mp3">
+                your browser does not support audio element 
+             </audio>
+             
+             <br><br>
+             <!--Video-->
+             <!--• Attributes: controls, autoplay, loop, width, height, muted. -->
+             <video controls autoplay muted loop height="500" >
+                <source src="D:\FSD-1\HTML\vedio.mp4"  type="video/ogg" >
+             </video>
+
         </figure>
     </body>
 </html>
