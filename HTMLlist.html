@@ -1,0 +1,104 @@
+<!--There are two types of lists:-->
+
+<!--1. Unordered list: An unordered list starts with the <ul> tag. Each list item starts with the <li> tag. 
+       The list items will be marked with disc (small black circles) by default.
+Attribute: 
+     type: type = ”disc/square/circle/none”       -->
+<html>
+    <head>
+        <title>Unorder List</title>
+    </head>
+    <body>
+        <ul>
+            <li>item1</li>
+            <ul type="disc">
+                <li>item1</li>
+            </ul>
+            <li>item2</li>
+            <ul type="circle">
+                <li>item1</li>
+            </ul>
+            <li>item3</li>
+            <ul type="square">
+                <li>item1</li>
+            </ul>
+            <li>item4</li>
+            <ul type="none">
+                <li>item1</li>
+            </ul>
+        </ul>
+    </body>
+</html>     
+
+<!--2. Ordered list: An ordered list starts with the <ol> tag. Each list item starts with the <li> tag. 
+       The list items will be marked with numbers by default:
+ 
+Attribute: 
+      type: type=” 1/ i/ I/ a/ A” 
+     start: Specifies the start value of an ordered list 
+  reversed: Specifies that the list order should be reversed (9,8,7...)       -->
+<html>
+    <head>
+        <title>Order List</title>
+    </head>
+    <body>
+        <ol>
+            <li>item1</li>
+            <ol  type="I" start=2 reversed>
+                <li>item1</li>
+                <li>item2</li>
+                <li>item2</li>
+                <li>item2</li>
+            </ol>
+            <li>item2</li>
+            <ol type="a" start="79">
+                <li>item1</li>
+                <li>item2</li>
+                <li>item2</li>
+                <li>item2</li>
+            </ol>
+            <li>item3</li>
+            <ol type="A" start="1" reversed>
+                <li>item1</li>
+                <li>item2</li>
+                <li>item2</li>
+                <li>item2</li>
+            </ol>   
+            <li>item4</li>
+        </ol>
+    </body>
+</html>
+
+<!--Nested List-->
+<html> 
+    <head><title>Nested List</title></head> 
+    <body>  
+        <ol type="A" start="4"> 
+            <li>List1</li> 
+            <li>List2</li> 
+            <ul type="square"> 
+                <li>list2.1</li> 
+                <li>list2.2</li> 
+                    <ol type="I" reversed > 
+                        <li>list 2.2.1</li> 
+                        <li>list 2.2.1</li> 
+                        <li>list 2.2.1</li> 
+                    </ol> 
+            </ul> 
+            <li>List3</li> 
+            <ul type="none"> 
+                <li>list 3.1</li> 
+                <li>list 3.2</li> 
+            </ul> 
+            <li>list4</li> 
+            <ol type="a"> 
+                <li>list 4.1</li> 
+                    <ul type="circle"> 
+                        <li>list 4.1.1</li> 
+                        <li>list 4.1.2</li> 
+                    </ul> 
+                <li>list 4.1</li> 
+            </ol> 
+        </ol> 
+    </body> 
+</html>
