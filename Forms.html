@@ -1,38 +1,178 @@
 <html>
-    <head>
-        <title>HTML FORMS EX.</title>
-    </head>
-    <body>
-        <form>
-            <fieldset>
-                <legend align="center"><h4>User</h4></legend>
-                <label for="uname">EnterName: </label>
-                <input type="text" id="uname" name="User" valu="name" placeholder="EnterName" autofocus>
-                <div>
-                    <br>
-                    <label for="password">Password: </label>
-                    <input type="password" id="password" name="password"  minlength="4" maxlength="6" required>
-                </div>
-                <div>
-                    <br>
-                    <label for="mail">Email: </label>
-                    <input type="email" id="mail" name="email"  value="LJ@gmail.com" readonly placeholder="Email">
-                </div>
-                <div>
-                    <br>
-                    <label for="number">Number</label>
-                    <input type="number" name="number" id="number" max="33" step="3" multiple>
-                </div>
-                <div>
-                    <br>
-                    <label for="phone">Mobile Number</label>
-                    <input type="tel" name="tel" id="phone" maxlength="10" minlength="10">
-                </div>
-                <div>
-                    <br>
-                    <input type="submit">
-                </div>
-            </fieldset>
-        </form>
-    </body>
+  <head>
+    <title>HTML FORMS</title>
+  </head>
+  <body>
+    <h2>Student Registration</h2>
+    <form action="#" method="get">
+      <fieldset>
+        <legend align="center">Information</legend>
+        <label for="userName">userName: </label>
+        <input
+          type="text"
+          id="userName"
+          name="Name"
+          autofocus
+          autocomplete="off"
+          placeholder="Enter name"
+          required
+          maxlength="20"
+        />
+
+        <br /><br />
+
+        <label for="password">password: </label>
+        <input
+          type="password"
+          name="password"
+          id="password"
+          required
+          minlength="4"
+          placeholder="Enter password"
+        />
+
+        <br /><br />
+
+        <label for="email">Email: </label>
+        <input
+          type="email"
+          name="mail"
+          id="email"
+          required
+          placeholder="name@Example.com"
+        />
+
+        <br /><br />
+        <label for="phone">phone: </label>
+        <input type="tel" name="phone" id="phone" placeholder="1234567890" />
+
+        <p>Gender:</p>
+        <label for="male">Male</label>
+        <input type="radio" name="Gender" value="male" id="male" checked />
+        <label for="Female">Female</label>
+        <input type="radio" name="Gender" value="female" id="Female" checked />
+
+        <p>Hobbies:</p>
+        <label for="swiming">swiming</label>
+        <input
+          type="checkbox"
+          name="Hobbies"
+          id="swiming"
+          value="swiming"
+          checked
+        />
+        <label for="football">football</label>
+        <input type="checkbox" name="Hobbies" id="football" value="" />
+      </fieldset>
+
+      <fieldset>
+        <legend align="center">Additional Information</legend>
+        <label for="dob">Date of birth: </label>
+        <input
+          type="date"
+          name="dob"
+          id="dob"
+          min="2025-09-12"
+          max="2025-12-12"
+          step="5"
+        />
+
+        <br /><br />
+
+        <label for="age">Age: </label>
+        <input
+          type="number"
+          name="age"
+          id="age"
+          min="1"
+          max="100"
+          step="1"
+          value="18"
+        />
+
+        <br /><br />
+
+        <label for="favcolor">favcolor</label>
+        <input type="color" name="favcolor" id="favcolor" value="cyan" />
+
+        <br /><br />
+
+        <label for="browser">Preferred Browser:</label>
+        <input list="browsers" name="browser" id="browser" />
+        <datalist id="browsers">
+          <option value="Chrome"></option>
+          <option value="Firefox"></option>
+          <option value="Edge"></option>
+        </datalist>
+
+        <br /><br />
+
+        <label for="degree">Select Branch</label>
+        <select name="degree_branch" id="degree">
+          <option value="select" disabled selected>Select Branch</option>
+          <optgroup label="Computer">
+            <option value="cse">CSE</option>
+            <option value="ce">CE</option>
+            <option value="it">IT</option>
+          </optgroup>
+          <optgroup label="other">
+            <option value="ec">EC</option>
+            <option value="civil">CIVIL</option>
+            <option value="mech">Mechenicle</option>
+          </optgroup>
+        </select>
+      </fieldset>
+
+      <fieldset>
+        <legend align="center">Feedback</legend>
+        <label for="msg">Your Message:</label><br />
+        <textarea name="message" id="msg" rows="5" cols="30">
+Enter your message</textarea
+        >
+        <br /><br />
+        <label for="range">satisfaction</label>
+        <input
+          type="range"
+          name="satisfaction"
+          id="range"
+          min="0"
+          max="50"
+          step="5"
+          value="25"
+          bgcolor="red"
+        />
+        <input type="hidden" name="userid" id="1234" />
+      </fieldset>
+      <fieldset>
+        <input type="submit" value="Submit Form" />
+        <input type="reset" value="Reset Form" />
+        <input type="button" value="Click me" />
+        <button type="submit">"submit(button tag)"</button>
+      </fieldset>
+    </form>
+  </body>
+</html>
+
+<html>
+  <head>
+    <title>File</title>
+  </head>
+  <body>
+    <br /><br />
+    <form action="#" method="get">
+      <fieldset>
+        <legend>Upload File</legend>
+        <label for="resume">Upload resume</label>
+        <input
+          type="file"
+          name="file"
+          id="resume"
+          accept=".pdf,.doc"
+          multiple
+        />
+      </fieldset>
+      <input type="submit" />
+      <input type="reset" />
+    </form>
+  </body>
 </html>
