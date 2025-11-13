@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #container {
+        height: 400px;
+        width: 80%;
+        margin: 10px auto;
+        border: 2px solid black;
+        background-color: azure;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap-reverse;
+      }
+      #container div {
+        height: 100px;
+        width: 300px;
+        text-align: center;
+      }
+      #AlineItems {
+        height: 400px;
+        width: 80%;
+        margin: 10px auto;
+        border: 2px solid black;
+        background-color: azure;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: baseline;
+      }
+      #AlineItems div {
+        height: 100px;
+        width: 300px;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>FlexBox</h1>
+    <div id="container">
+      <div style="background-color: violet">vilote</div>
+      <div style="background-color: indigo">vilote</div>
+      <div style="background-color: blue">vilote</div>
+      <div style="background-color: green">vilote</div>
+      <div style="background-color: yellow">vilote</div>
+      <div style="background-color: orange">vilote</div>
+      <div style="background-color: red">vilote</div>
+    </div>
+    <br /><br />
+    <h1>AlineItems</h1>
+    <div id="AlineItems">
+      <div style="background-color: violet; height: 200px">vilote</div>
+      <div style="background-color: indigo">vilote</div>
+      <div style="background-color: blue">vilote</div>
+      <div style="background-color: green">vilote</div>
+      <div style="background-color: yellow">vilote</div>
+      <div style="background-color: orange">vilote</div>
+      <div style="background-color: red; height: 50px; font-size: 50px">
+        vilote
+      </div>
+    </div>
+  </body>
+</html>
