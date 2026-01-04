@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>TODO</h1>
+    <input type="text" value="">
+    <button type="button">button</button>
+    <ul>
+        <li>eat<button class="del">delete</button></li>
+    </ul>
+    <script>
+        let ipu = document.querySelector('input');
+        let btn = document.querySelector('button')
+        let ul = document.querySelector('ul')
+
+        btn.addEventListener('click', () => {
+            let item = document.createElement('li')
+            item.innerText = ipu.value;
+
+            let delBtn = document.createElement('button');
+            delBtn.innerText = 'delete';
+            delBtn.classList.add("del")
+            item.appendChild(delBtn);
+            ul.appendChild(item);
+            ipu.value = ""
+        })
+
+        ul.addEventListener('click', (event) => {
+            if (event.target.nodeName == 'BUTTON') {
+                let par = event.target.parentElement;
+                console.log(par)
+                par.remove();
+            }
+            else {
+                console.log('button not delete')
+            }
+        })
+
+        //let delBtn = document.querySelectorAll('.del');
+        //for (del of delBtn) {
+        //del.addEventListener('click', () => {
+        //  let par = del.parentElement;
+        // console.log(par)
+        //par.remove()
+        // })
+        //}
+    </script>
+</body>
+
+</html>

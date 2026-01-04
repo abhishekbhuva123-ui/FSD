@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Abhishek Bhuva</h1>
+    <script>
+        x = document.querySelector('h1')
+        function changeColor(color, delay) {
+            return new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    x.style.color = color
+                    resolve("color completed")
+
+                }, delay)
+            })
+
+        }
+        changeColor('red', 1000)
+            .then(() => {
+                console.log("red completed")
+                return changeColor('green', 1000)
+            })
+            .then(() => {
+                console.log('green completed')
+                return changeColor('orange', 1000)
+            })
+            .then(() => {
+                console.log('orange completed')
+                return changeColor('blue', 1000)
+            })
+            .then(() => {
+                console.log('blue completed')
+
+            })
+
+
+        //changeColor('red', 1000, () => {
+        //   changeColor('green', 1000, () => {
+        //      changeColor('orange', 1000, () => {
+        //         changeColor('blue', 1000)
+        //     })
+        // })
+        //})
+    </script>
+</body>
+
+</html>

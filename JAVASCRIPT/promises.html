@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function saveDB(data, success, failure) {
+            let internateSpeed = Math.floor(Math.random() * 10) + 1
+            if (internateSpeed > 4) {
+                success();
+
+            }
+            else {
+                failure();
+            }
+        }
+        saveDB("abhi", () => {
+            console.log("data stored successfuly")
+        }, () => {
+            console.log("internet connection fail")
+        });
+
+        function DB() {
+            return new Promise((resolve, reject) => {
+                let internateSpeed = Math.floor(Math.random() * 10) + 1
+                if (internateSpeed > 4) {
+                    resolve("data was saved")
+                }
+                else {
+                    reject("rejected data");
+                }
+            })
+        }
+        DB()
+            .then((result) => {
+                console.log("data1 saved");
+                return DB();
+            })
+            .then(() => {
+                console.log("data 2 saved")
+                return DB();
+            })
+            .then(() => {
+                console.log("data 3 saved")
+            })
+            .catch((error) => {
+                console.log("Rejected promise:", error);
+            });
+
+    </script>
+</body>
+
+</html>

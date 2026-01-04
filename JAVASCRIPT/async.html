@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        async function name() {
+            //throw 'hello i am throw error'
+            return 'hello';
+        }
+        name()
+            .then((result) => {
+                console.log('run compltetely', result)
+            })
+            .catch((error) => {
+                console.log("error found", error)
+            })
+
+        let x = async () => {
+            return 'async arrow function'
+        }
+        x()
+    </script>
+</body>
+
+</html>
