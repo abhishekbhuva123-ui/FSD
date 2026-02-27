@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Data of user</title>
+</head>
+
+<body>
+    <h1>Show All User Detail</h1>
+
+    <table border="1px">
+        <thead>
+            <tr>
+                <th>id</th>
+                <th>username</th>
+                <th>email</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% for(let user of result) { %>
+                <tr>
+                    <td>
+                        <%= user.id %>
+                    </td>
+                    <td>
+                        <%= user.username %>
+                    </td>
+                    <td>
+                        <%= user.email %>
+                    </td>
+                    <td>
+                        <form method="get" action="/user/<%= user.id %>/edit">
+                            <button>Edituser</button>
+                        </form>
+                    </td>
+                </tr>
+                <% } %>
+        </tbody>
+    </table>
+
+</body>
+
+</html>
