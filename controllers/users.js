@@ -12,6 +12,7 @@ module.exports.signup = async (req, res,next) => {
     console.log(registerUser);
     req.login(registerUser, (err) => {
       if (err) {
+        console.log(err)
         return next(err);
       } else {
         req.flash("success", "Welcome to Wonderlast!");
