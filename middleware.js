@@ -9,18 +9,18 @@ module.exports.isLoggedIn = (req, res, next) => {
     req.session.redirectUrl = req.originalUrl;
     req.flash("error", "you must be  logged in to create listing");
     res.redirect("/login");
-  } else {
-    next();
   }
+    next();
+  
 };
 
 module.exports.saveRedirectUrl = (req, res, next) => {
   if (req.session.redirectUrl) {
     res.locals.redirectUrl = req.session.redirectUrl;
   }
-  else{
+  
      next();
-  }
+  
 };
 
 module.exports.isOwner = async (req, res, next) => {
@@ -29,27 +29,27 @@ module.exports.isOwner = async (req, res, next) => {
   if (!listing.owner.equals(res.locals.currentUser._id)) {
     req.flash("error", "You are not the owner of this listing");
     return res.redirect(`/listing/${id}`);
-  } else {
+  } 
     next();
-  }
+  
 };
 
 module.exports.validateListing = (req, res, next) => {
   let { error } = listingSchema.validate(req.body);
   if (error) {
     throw new ExpressError(404, error);
-  } else {
+  } 
     next();
-  }
+  
 };
 
 module.exports.validateReview = (req, res, next) => {
   let { error } = reviewSchema.validate(req.body);
   if (error) {
     throw new ExpressError(404, error);
-  } else {
+  } 
     next();
-  }
+  
 };
 
 module.exports.isReviewAuthor = async (req, res, next) => {
@@ -58,7 +58,7 @@ module.exports.isReviewAuthor = async (req, res, next) => {
   if (!review.author.equals(res.locals.currentUser._id)) {
     req.flash("error", "You are not the author of this review ");
     return res.redirect(`/listing/${id}`);
-  } else {
+  } 
     next();
-  }
+  
 };
