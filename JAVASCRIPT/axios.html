@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button type="button">click me</button>
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.13.2/dist/axios.min.js"></script>
+    <script>
+        let url = 'https://catfact.ninja/fact'
+        let y = document.querySelector('button')
+        y.addEventListener('click', async () => {
+            let x = await getAxios()
+            console.log(x)
+        })
+        async function getAxios() {
+            try {
+                let res = await axios.get(url)
+                return res.data.fact
+            }
+            catch {
+                return 'file not found error'
+            }
+        }
+
+        let url1 = "http://universities.hipolabs.com/search?name="
+    </script>
+</body>
+
+</html>

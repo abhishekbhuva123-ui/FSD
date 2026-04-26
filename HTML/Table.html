@@ -1,0 +1,202 @@
+<!--Table Attributes:- cellPadding,cellspacing,border,align,bgcolor-->
+<html>
+    <head>
+        <title>Table</title>
+    </head>
+    <table border="2" cellpadding="10" cellspacing="10" align="center" bgcolor="red">
+        <!--border="2px or 10% or 10"-->
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Cost</th>
+            </tr>
+        </thead>
+        <tbody  >
+            <tr>
+                <td>A</td>
+                <td>20</td>
+            </tr>
+            <tr>
+                <td>B</td>
+                <td>30</td>
+            </tr>
+        </tbody>
+        <tfoot  align="center">
+            <tr>
+                <td>Total</td>
+                <td>50</td>
+            </tr>
+        </tfoot>
+    </table>
+</html>
+
+<!--Table Attributes:- rulea type: -->
+<html>
+    <head>
+        <title>Table</title>
+    </head>
+    <body>
+        <h3 align="center">Table using rules  Attribute</h3>
+    <table border="1" cellpadding="10" align="center" rules="groups" >
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Cost</th>
+            </tr>
+        </thead>
+        <tbody  >
+            <tr>
+                <td>A</td>
+                <td>20</td>
+            </tr>
+            <tr>
+                <td>B</td>
+                <td>30</td>
+            </tr>
+        </tbody>
+        <tfoot  align="center">
+            <tr>
+                <td>Total</td>
+                <td>50</td>
+            </tr>
+        </tfoot>
+    </table>
+    </body>
+</html>
+
+<html>
+    <head>
+        <title>Table With rowspam</title>
+    </head>
+    <body align="center">
+        <h3>Rowspan</h3>
+        <table border="2" cellpadding="30" cellspacing="4" align="center">
+            <tr>
+                <td rowspan="2">A</td>
+                <td>B</td>
+            </tr>
+            <tr>
+                <td>C</td>
+            </tr>
+        </table>
+    </body>
+</html>
+
+<html>
+    <head>
+        <title>Table With rowspam</title>
+    </head>
+    <body align="center">
+        <h3>Colspan</h3>
+        <table border="2" cellpadding="30" cellspacing="50" align="center" rules="all">
+            <tr align="center">
+                <td colspan="2">A</td>
+            </tr>
+            <tr>
+                <td>C</td>
+                <td>B</td>
+            </tr>
+        </table>
+    </body>
+</html>
+
+<html>
+    <body>
+        <br><br>
+        <table border="2" align="center" width="80%" rules="all" cellpadding="10" bgcolor="lightyellow">
+            <tr bgcolor="lightblue">
+                <td colspan="2">Header spanning 2 columns</td>
+                <td align="center" rowspan="2">Rowspan Header</tdrowsapn></td>
+            </tr>
+            <tr bgcolor="pink">
+                <td>cell1</td>
+                <td align="right">cell2</td>
+            </tr>
+            <tr bgcolor="gray">
+                <td>row2,col1</td>
+                <td colspan="2" align="justify">Merged across 2 columns</td>
+            </tr>
+        </table>
+    </body>
+</html>
+
+<html>
+    <body>
+        <br><br>
+        <table border="2" cellpadding="15" width="50%" align="center" >
+            <caption><strong><font size="10">Color Table</font></strong></caption>
+            <tr>
+                <td rowspan="2" bgcolor="yellow">A</td>
+                <td bgcolor="lightgreen">B</td>
+                <td rowspan="3" bgcolor="yellow">D</td>
+                <td colspan="2" bgcolor="pink">E</td>
+                <td bgcolor="lightgreen">F</td>
+            </tr>
+            <tr>
+                <td bgcolor="ligtblue">C</td>
+                <td rowspan="2" bgcolor="lightblue">g</td>
+                <td rowspan="2" bgcolor="lightgreen">H</td>
+                <td rowspan="2" bgcolor="yellow">I</td>
+            </tr>
+            <tr>
+                <td colspan="2" bgcolor="pink">J</td>
+            </tr>
+            <tr>
+                <td colspan="3" bgcolor="lightgreen">K</td>
+                <td bgcolor="yellow">L</td>
+                <td colspan="2" bgcolor="yellow">M</td>
+            </tr>
+        </table>
+    </body>
+</html>
+
+<br><br>
+
+<html>
+    <body>
+        <table border="2" cellpadding="5" width="80%" rules="groups" align="center">
+            <thead>
+                <tr bgcolor="#ddd">
+                    <th>Branch</th>
+                    <th>Name</th>
+                    <th>Roll Number</th>
+                </tr>
+            </thead>
+            <tbody bgcolor="lightblue">
+                <tr>
+                    <td rowspan="3">CS</td>
+                    <td>Abhi</td>
+                    <td>CS101</td>
+                </tr>
+                <tr>
+                    <td>Bhuva</td>
+                    <td>CS102</td>
+                </tr>
+                <tr>
+                    <td>Mohan</td>
+                    <td>CS103</td>
+                </tr>
+            </tbody>
+            <tbody bgcolor="lightyellow">
+                <tr>
+                    <td rowspan="3">CE</td>
+                    <td>Keshav</td>
+                    <td>CE101</td>
+                </tr>
+                <tr>
+                    <td>Manu</td>
+                    <td>CE102</td>
+                </tr>
+                <tr>
+                    <td>Hari</td>
+                    <td>CE103</td>
+                </tr>
+            </tbody>
+            <tfoot bgcolor="#ddd">
+                <tr>
+                    <td colspan="3" align="center">LJ University 2025</td>
+                </tr>
+            </tfoot>
+        </table>
+    </body>
+</html>

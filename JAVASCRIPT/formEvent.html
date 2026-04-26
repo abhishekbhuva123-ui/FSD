@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="/BOOSTRAP/">
+        <h3>Your Text</h3>
+        <p></p>
+        <input type="text">
+        <button type="submit">button</button>
+    </form>
+    <script>
+        document.querySelector('form').addEventListener('submit', function (event) {
+            event.preventDefault();
+            console.log(this.elements[0])
+            let i = document.querySelector('input')
+            console.dir(i)
+            console.log(i.value)
+        })
+        x = document.querySelector('p')
+        i = document.querySelector('input')
+        i.addEventListener('input', function () {
+            x.innerText = i.value
+        })
+
+    </script>
+</body>
+
+</html>

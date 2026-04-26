@@ -1,0 +1,113 @@
+<% layout("/layouts/boilerplate") %>
+
+    <style>
+        #filters {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .filter {
+            text-align: center;
+            margin-right: 2rem;
+            margin-top: 2rem;
+            opacity: 0.7;
+        }
+
+        .filter:hover {
+            opacity: 1;
+            cursor: pointer;
+        }
+
+        .filter p {
+            font-size: 0.8rem;
+        }
+
+        .tax-toggle {
+            display: flex;
+            align-items: center;
+            border: 1px solid black;
+            border-radius: 1rem;
+            margin-left: 3rem;
+            height: 3.125rem;
+            padding: 1rem;
+        }
+    </style>
+
+    <body>
+        <!-- <h2>All Listings</h2> -->
+        <div id="filters">
+            <div class="filter">
+                <div><i class="fa-solid fa-fire"></i></div>
+                <p>Trending</p>
+            </div>
+            <div class="filter">
+                <div><i class="fa-solid fa-bed"></i></div>
+                <p>Rooms</p>
+            </div>
+            <div class="filter">
+                <div><i class="fa-solid fa-mountain-city"></i></div>
+                <p>Mountain City</p>
+            </div>
+            <div class="filter">
+                <div><i class="fa-solid fa-mountain"></i></div>
+                <p>Mountain</p>
+            </div>
+            <div class="filter">
+                <div><i class="fa-brands fa-fort-awesome"></i></div>
+                <p>Castles</p>
+            </div>
+            <div class="filter">
+                <div><i class="fa-solid fa-person-swimming"></i></div>
+                <p>Amazing Pool</p>
+            </div>
+            <div class="filter">
+                <div><i class="fa-solid fa-landmark-dome"></i></div>
+                <p>Domes</p>
+            </div>
+            <div class="filter">
+                <div><i class="fa-solid fa-campground"></i></div>
+                <p>Camping</p>
+            </div>
+            <div class="filter">
+                <div><i class="fa-sharp-duotone fa-solid fa-cow"></i></div>
+                <p>Farms</p>
+            </div>
+            <div class="filter">
+                <div><i class="fa-chisel fa-regular fa-snowflake"></i></div>
+                <p>Artics</p>
+            </div>
+            <div class="filter">
+                <div><i class="fa-solid fa-ship"></i></div>
+                <p>Boats</p>
+            </div>
+
+            <div class="tax-toggle">
+                <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
+                    <label class="form-check-label" for="flexSwitchCheckDefault">Display after total taxis</label>
+                </div>
+            </div>
+
+        </div>
+        <div class="row row-cols-lg-4 row-cols-md-3 row-cols-md-2 mt-3">
+            <% for(listing of listings){ %>
+                <a href="/listing/<%= listing._id %>" class="listing-link">
+                    <div class="card col listing-card">
+                        <img src="<%= listing.image.url %>" class="card-img-top" alt="listing_img"
+                            style="height: 13rem;">
+                        <div class="card-img-overlay"></div>
+                        <div class="card-body">
+                            <p class="card-text">
+                                <b>
+                                    <%= listing.title %>
+                                </b> <br>
+                                &#x20B9 <%= listing.price.toLocaleString("en-IN") %>
+                            </p>
+                        </div>
+                    </div>
+                </a>
+
+                <%}%>
+        </div>
+    </body>
