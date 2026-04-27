@@ -4,17 +4,17 @@ module.exports.renderSignupForm = (req, res) => {
   res.render("users/signup.ejs");
 };
 
-module.exports.signup = async (req, res,next) => {
+module.exports.signup = async (req, res, next) => {
   try {
-    console.log(req.body)
+    console.log(req.body);
     let { username, email, password } = req.body;
     const newUser = new User({ email, username });
     const registerUser = await User.register(newUser, password);
-    
+
     req.login(registerUser, (err) => {
       if (err) {
-       
-        next(err);
+        console.log(err);
+        return next(err);
       } else {
         req.flash("success", "Welcome to Wonderlast!");
         res.redirect("/listing");
