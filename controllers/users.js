@@ -13,7 +13,6 @@ module.exports.signup = async (req, res, next) => {
 
     req.login(registerUser, (err) => {
       if (err) {
-        console.log(err);
         return next(err);
       } else {
         req.flash("success", "Welcome to Wonderlast!");
@@ -21,6 +20,7 @@ module.exports.signup = async (req, res, next) => {
       }
     });
   } catch (e) {
+    console.log(err);
     req.flash("error", e.message);
     res.redirect("/signup");
   }
