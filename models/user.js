@@ -9,6 +9,6 @@ const userSchema = new Schema({
   },
 });
 
-userSchema.plugin(passportLocalMongooes);
+userSchema.plugin(passportLocalMongooes.default || passportLocalMongooes);
 
 module.exports = mongoose.model("User", userSchema);
